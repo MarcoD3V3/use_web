@@ -1,4 +1,4 @@
-import { unsealPortalAccess } from "@craftlauncher/shared";
+import { unsealPortalAccess } from "@/lib/shared/portal-access-seal";
 
 export async function resolvePortalLoginPassword(input: {
   password?: string;

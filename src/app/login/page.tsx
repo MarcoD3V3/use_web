@@ -2,7 +2,8 @@
 
 import { FormEvent, Suspense, useCallback, useEffect, useState, type ClipboardEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { isPortalAccessSealed, parseFirstProfileClipboardBlock } from "@craftlauncher/shared";
+import { parseFirstProfileClipboardBlock } from "@/lib/shared/profile-clipboard";
+import { isPortalAccessSealed } from "@/lib/shared/portal-access-seal";
 import { getPortalDeviceCredentials } from "@/lib/device-auth";
 import { LayoutDashboard, Loader2, Lock } from "lucide-react";
 

@@ -1,0 +1,14 @@
+# Player Portal — servicio Railway (root: packages/user_web o repo solo user_web)
+#
+# Builder: Dockerfile (no Nixpacks)
+# Start: node server.js  — NO uses npm run start -w craftlauncher-user-web
+#
+# Variables: ADMIN_API_URL, NEXT_PUBLIC_ADMIN_API_URL, PORTAL_CLIPBOARD_SECRET
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "node server.js"
+restartPolicyType = "ON_FAILURE"

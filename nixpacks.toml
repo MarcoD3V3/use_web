@@ -1,0 +1,13 @@
+# Evita conflicto buildkit: tsconfig.tsbuildinfo en raíz vs segunda fase COPY de Nixpacks
+[phases.setup]
+nixPkgs = ["nodejs_20", "npm-9_x"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[phases.build]
+dependsOn = ["install"]
+cmds = ["rm -rf tsconfig.tsbuildinfo .next", "npm run build"]
+
+[start]
+cmd = "npm run start"

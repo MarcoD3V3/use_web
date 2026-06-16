@@ -575,6 +575,16 @@ body {
   opacity: 0.8;
 }
 
+.portal-chat-link {
+  color: var(--color-portal-accent-soft);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.portal-chat-link:hover {
+  color: white;
+}
+
 .portal-chat-compose {
   display: flex;
   align-items: center;
